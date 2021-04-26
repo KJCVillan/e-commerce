@@ -1,0 +1,58 @@
+/* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;400;700;900&display=swap');
+
+body
+{
+  font-family: 'Poppins', sans-serif;
+  font-size: 1em;
+}
+
+h1
+{
+  font-size: 4em;
+  font-weight: 900;
+  letter-spacing: -2px;
+}
+
+h2
+{
+  font-size: 3rem;
+  font-weight: 100;
+  letter-spacing: -2px;
+  text-transform: lowercase;
+}
+
+h3
+{
+  font-size: 1.5rem;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+#main-header
+{
+  background-color: #eeeeee;
+}
+
+#mensaje
+{
+  background-color: #333333;
+  color: #ffffff;
+}
+
+#noticias
+{
+  background-color: #dddddd;
+}
+
+.paddied
+{
+  padding-top: 90px;
+  padding-bottom: 90px;
+}
+
+#main-header h1,
+#main-header p
+{
+  margin: 0;
+}
