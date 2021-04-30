@@ -29,11 +29,6 @@ h3
   text-transform: uppercase;
 }
 
-#main-header
-{
-  background-color: #eeeeee;
-}
-
 #mensaje
 {
   background-color: #333333;
@@ -45,14 +40,13 @@ h3
   background-color: #dddddd;
 }
 
-.paddied
+.padded
 {
   padding-top: 90px;
   padding-bottom: 90px;
 }
 
-#main-header h1,
-#main-header p
+.fila-seleccionada
 {
-  margin: 0;
+  background-color: silver;
 }

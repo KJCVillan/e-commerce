@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Genio } from 'src/app/entities/genio';
+import { GENIOS } from 'src/app/entities/genios';
 
 @Component({
   selector: 'app-genios',
@@ -7,9 +9,21 @@ import { Component, OnInit } from '@angular/core';
 })
 export class GeniosComponent implements OnInit {
 
+  frase ="Vamos a luchar por Perú";
+  personas = GENIOS;
+  heroeElegido : Genio;
+
+  aleatorio = Math.floor(Math.random()*this.personas.length);
+  heroeGanador : Genio = this.personas[this.aleatorio];
+
   constructor() { }
 
-  ngOnInit(): void {
+  ngOnInit(): void {}
+
+  seleccionar(heroeSeleccionado: Genio)
+  {
+    console.log(heroeSeleccionado);
+    this.heroeElegido = heroeSeleccionado;
   }
 
 }
