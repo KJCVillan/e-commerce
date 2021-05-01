@@ -1,0 +1,25 @@
+<section id="paises" class="padded">
+  <div class="container">
+    <h2>Paises</h2>
+      <table class="table table-hover">
+        <thead>
+          <tr>
+            <th>Código</th>
+            <th>País</th>
+            <th>Capital</th>
+            <th>Subregion</th>
+            <th>Population</th>
+            <th>Area</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let filaPais of listaPaises">
+            <td>{{filaPais.alpha2Code}}</td>
+            <td>{{filaPais.name}}</td>
+            <td>{{filaPais.capital}}</td>
+            <td>{{filaPais.subregion}}</td>
+            <td class="text-end">{{filaPais.population}}</td>
+            <td class="text-end">{{filaPais.area}}</td>
+          </tr>
+        </tbody>
+      </table>

@@ -1,7 +1,8 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
+import { HttpClientModule } from '@angular/common/http'
 import { AppRoutingModule } from './app-routing.module';
+
 import { AppComponent } from './app.component';
 import { NoticiasComponent } from './noticias/noticias.component';
 import { MensajeComponent } from './inicio/mensaje/mensaje.component';
@@ -14,6 +15,7 @@ import { GeniosComponent } from './inicio/genios/genios.component';
 import { HomeComponent } from './inicio/home/home.component';
 import { NosotrosComponent } from './components/nosotros/nosotros.component';
 import { ColaboradoresComponent } from './components/colaboradores/colaboradores.component';
+import { PaisesComponent } from './components/paises/paises.component';
 
 @NgModule({
   declarations: [
@@ -28,11 +30,13 @@ import { ColaboradoresComponent } from './components/colaboradores/colaboradores
     GeniosComponent,
     HomeComponent,
     NosotrosComponent,
-    ColaboradoresComponent
+    ColaboradoresComponent,
+    PaisesComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
