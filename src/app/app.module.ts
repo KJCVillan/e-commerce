@@ -16,6 +16,7 @@ import { HomeComponent } from './inicio/home/home.component';
 import { NosotrosComponent } from './components/nosotros/nosotros.component';
 import { ColaboradoresComponent } from './components/colaboradores/colaboradores.component';
 import { PaisesComponent } from './components/paises/paises.component';
+import { PaisDetalleComponent } from './components/pais-detalle/pais-detalle.component';
 
 @NgModule({
   declarations: [
@@ -31,7 +32,8 @@ import { PaisesComponent } from './components/paises/paises.component';
     HomeComponent,
     NosotrosComponent,
     ColaboradoresComponent,
-    PaisesComponent
+    PaisesComponent,
+    PaisDetalleComponent
   ],
   imports: [
     BrowserModule,

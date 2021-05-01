@@ -50,3 +50,9 @@ h3
 {
   background-color: silver;
 }
+
+.table-hover>tbody>tr:hover {
+  --bs-table-accent-bg: rgb(231 249 34 / 17%);
+  color: #000000;
+  cursor: pointer;
+}
