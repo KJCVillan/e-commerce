@@ -13,8 +13,9 @@
           </tr>
         </thead>
         <tbody>
-          <tr *ngFor="let filaPais of listaPaises">
-            <td>{{filaPais.alpha2Code}}</td>
+          <tr *ngFor="let filaPais of listaPaises" 
+          [routerLink] ="['/paisdetalle/' + filaPais.alpha3Code]">
+            <td>{{filaPais.alpha3Code}}</td>
             <td>{{filaPais.name}}</td>
             <td>{{filaPais.capital}}</td>
             <td>{{filaPais.subregion}}</td>

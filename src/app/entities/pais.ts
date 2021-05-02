@@ -1,8 +1,11 @@
 export class Pais {
   name:           string;
-  alpha2Code:     string;
+  alpha3Code:     string;
   capital:        string;
   subregion:      string;
   population:     number;
   area:           number;
+  flag:           string;
+  altSpellings:   [];
+  regionalBlocs:  [];
 }

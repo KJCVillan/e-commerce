@@ -1,1 +1,39 @@
-<p>pais-detalle works!</p>
+<section id="pais-detalle" class="padded">
+
+  <div class="container" *ngIf="pais">
+
+    <h2 class="text-uppercase">{{pais.name}}</h2>
+
+    <div class="row">
+
+      <div class="col-md-3">
+        <p>Capital: {{pais.capital}}</p>
+        <p>Poblacion: {{pais.population}}</p>
+      </div>
+
+      <div class="col-md-3">
+        <h5>Otras denominaciones</h5>
+        <p *ngFor="let denominacion of pais.altSpellings">
+            {{denominacion}}
+        </p>
+    </div>
+
+    <div class="col-md-3">
+      <h5>Bloques regiones</h5>
+      <!-- <p *ngFor="let bloque of pais.regionalBlocs" >
+        <strong>{{bloque.acronym}}</strong> - {{bloque.name}} 
+      </p> -->
+    </div>
+    
+    <div class="col-md-3">
+      <h5>Bandera</h5>
+      <figure>
+        <img src={{pais.flag}} class="img-fluid" alt={{pais.name}}>
+        <figcaption>Bandera de {{pais.name}}</figcaption>
+      </figure>  
+    </div>
+
+    </div>  
+    
+  </div>
+</section>
