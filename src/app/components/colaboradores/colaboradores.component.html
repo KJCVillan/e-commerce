@@ -1,5 +1,17 @@
 <section id="colaboradores" class="padded">
   <div class="container">
     <h2>Colaboradores</h2>
+
+    <div class="row row-cols-1 row-cols-md-4 g-4">
+      <div class="col" *ngFor="let filaEmpleados of listaEmpleados">
+        <div class="card">
+          <img src="https://servicios.campus.pe/fotos/{{filaEmpleados.foto}}" class="card-img-top" alt="nombre: {{filaEmpleados.nombres}}">
+          <div class="card-body">
+            <h5 class="card-title">{{filaEmpleados.tratamiento}} {{filaEmpleados.nombres}} {{filaEmpleados.apellidos}}</h5>
+            <p class="card-text">{{filaEmpleados.cargo}}</p>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
 </section>
