@@ -22,8 +22,9 @@ export class PaisDetalleComponent implements OnInit {
       params => {
         const id = params.id;
         console.log(id);
-
-        this.leerPais(id);
+        if(id){
+          this.leerPais(id);
+        }
       }
     )
   }

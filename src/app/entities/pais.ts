@@ -6,6 +6,6 @@ export class Pais {
   population:     number;
   area:           number;
   flag:           string;
-  altSpellings:   [];
-  regionalBlocs:  [];
+  altSpellings:   string[];
+  regionalBlocs:  string[];
 }
