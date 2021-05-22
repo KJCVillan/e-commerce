@@ -21,6 +21,7 @@
     "@angular/router": "~11.2.10",
     "bootstrap": "^5.0.0-beta3",
     "jquery": "^3.6.0",
+    "ngx-filter-pipe": "^2.1.2",
     "popper.js": "^1.16.1",
     "rxjs": "~6.6.0",
     "tslib": "^2.0.0",

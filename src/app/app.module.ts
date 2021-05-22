@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { HttpClientModule } from '@angular/common/http'
 import { AppRoutingModule } from './app-routing.module';
+import { FilterPipeModule } from 'ngx-filter-pipe';
 
 import { AppComponent } from './app.component';
 import { NoticiasComponent } from './noticias/noticias.component';
@@ -38,7 +39,8 @@ import { PaisDetalleComponent } from './components/pais-detalle/pais-detalle.com
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    FilterPipeModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -7,5 +7,13 @@ export class Pais {
   area:           number;
   flag:           string;
   altSpellings:   string[];
-  regionalBlocs:  string[];
+  // regionalBlocs:  any[];
+  regionalBlocs: bloqueRegional[];
 }
+
+export class bloqueRegional 
+{
+  acronym: string;
+  name: string;
+}
+
