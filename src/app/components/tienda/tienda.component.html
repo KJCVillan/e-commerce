@@ -1,6 +1,5 @@
 <section id="colaboradores" class="padded">
   <div class="container">
-    <h2>Tienda</h2>
     <div class="row">
       <div class="col-md-3">
         <ul class="list-group">
@@ -14,8 +13,8 @@
         </ul>
       </div>
       <div class="col-md-9" *ngIf ="categoriaElegida">
-        <h3>{{categoriaElegida.nombre}}</h3>
-        <p>{{categoriaElegida.descripcion}}</p>
+        <!-- <h3>{{categoriaElegida.nombre}}</h3>
+        <p>{{categoriaElegida.descripcion}}</p> -->
         <app-productos [CategoriaX]="categoriaElegida">
 
         </app-productos>

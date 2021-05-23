@@ -1,1 +1,52 @@
-<p>productos works!</p>
+<ul class="nav nav-tabs" id="myTab" role="tablist">
+
+  <li class="nav-item" role="presentation">
+    <button class="nav-link active" id="tabla-tab" data-bs-toggle="tab" data-bs-target="#tabla" type="button" role="tab" aria-controls="tabla" aria-selected="true">Tabla</button>
+  </li>
+  <li class="nav-item" role="presentation">
+    <button class="nav-link" id="cuadricula-tab" data-bs-toggle="tab" data-bs-target="#cuadricula" type="button" role="tab" aria-controls="cuadricula" aria-selected="false">Cuadricula</button>
+  </li>
+
+</ul>
+<div class="tab-content" id="myTabContent">
+  
+  <div class="tab-pane fade show active" id="tabla" role="tabpanel" aria-label ledby="tabla-tab">
+    <table class="table table-hover">
+      <thead>
+        <tr class="text-center">
+          <th>Código</th>
+          <th>Nombre</th>
+          <th>Detalle</th>
+          <th>Precio (S/)</th>
+        </tr>
+      </thead>
+      <tbody >
+        <tr *ngFor="let filaProducto of listaProductos">
+          <td class="text-center">{{filaProducto.idproducto}}</td>
+          <td>{{filaProducto.nombre}}</td>
+          <td>{{filaProducto.detalle}}</td>
+          <td class="text-end">{{filaProducto.precio | number:'.2'}}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="tab-pane fade" id="cuadricula" role="tabpanel" aria-labelledby="cuadricula-tab">
+    <div class="row row-cols-1 row-cols-md-4 g-4">
+      <div class="col" *ngFor="let filaProducto of listaProductos">
+        <div class="card">
+          <img src="https://servicios.campus.pe/{{filaProducto.imagengrande}}" class="card-img-top" alt="nombre: {{filaProducto.nombre}}">
+          <div class="card-body">
+            <h5 class="card-title">{{filaProducto.nombre}}</h5>
+            <h6>{{filaProducto.detalle}}</h6> 
+            <p> S/. {{filaProducto.precio | number:'.2'}}</p> 
+            <!-- {{filaProducto.oferta}} -->
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+
