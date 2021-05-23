@@ -10,6 +10,11 @@ import { PaisesService } from 'src/app/services/paises.service';
 export class PaisesComponent implements OnInit {
 
   listaPaises: Pais [];
+  paisesFilter: any = { name: '' };
+  order: string = 'alpha3Code';
+  reverse: boolean = false;
+  paginaActual: number = 1;
+
   constructor(private paisesService: PaisesService) { }
 
 
@@ -22,4 +27,12 @@ export class PaisesComponent implements OnInit {
     )
   }
 
+  setOrder(value:string)
+  {
+    if(this.order === value)
+    {
+      this.reverse = !this.reverse;
+    }
+    this.order = value
+  }
 }

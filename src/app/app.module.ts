@@ -1,8 +1,11 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { HttpClientModule } from '@angular/common/http'
+import { HttpClientModule } from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
 import { FilterPipeModule } from 'ngx-filter-pipe';
+import { OrderModule } from 'ngx-order-pipe';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms'
+import { NgxPaginationModule } from 'ngx-pagination';
 
 import { AppComponent } from './app.component';
 import { NoticiasComponent } from './noticias/noticias.component';
@@ -40,7 +43,11 @@ import { PaisDetalleComponent } from './components/pais-detalle/pais-detalle.com
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    FilterPipeModule
+    FilterPipeModule,
+    OrderModule,
+    FormsModule,
+    ReactiveFormsModule,
+    NgxPaginationModule
   ],
   providers: [],
   bootstrap: [AppComponent]
