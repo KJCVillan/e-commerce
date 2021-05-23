@@ -4,6 +4,8 @@ import { ColaboradoresComponent } from './components/colaboradores/colaboradores
 import { NosotrosComponent } from './components/nosotros/nosotros.component';
 import { PaisDetalleComponent } from './components/pais-detalle/pais-detalle.component';
 import { PaisesComponent } from './components/paises/paises.component';
+import { ProductosComponent } from './components/productos/productos.component';
+import { TiendaComponent } from './components/tienda/tienda.component';
 import { HomeComponent } from './inicio/home/home.component';
 
 const routes: Routes = [
@@ -12,7 +14,9 @@ const routes: Routes = [
   {path: 'nosotros', component: NosotrosComponent},
   {path: 'colaboradores', component: ColaboradoresComponent},
   {path: 'paises', component: PaisesComponent},
-  {path: 'paisdetalle/:id', component: PaisDetalleComponent}
+  {path: 'paisdetalle/:id', component: PaisDetalleComponent},
+  {path: 'tienda', component: TiendaComponent},
+  {path: 'productos', component: ProductosComponent}
 ];
 
 @NgModule({

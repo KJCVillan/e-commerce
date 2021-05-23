@@ -21,6 +21,8 @@ import { NosotrosComponent } from './components/nosotros/nosotros.component';
 import { ColaboradoresComponent } from './components/colaboradores/colaboradores.component';
 import { PaisesComponent } from './components/paises/paises.component';
 import { PaisDetalleComponent } from './components/pais-detalle/pais-detalle.component';
+import { TiendaComponent } from './components/tienda/tienda.component';
+import { ProductosComponent } from './components/productos/productos.component';
 
 @NgModule({
   declarations: [
@@ -37,7 +39,9 @@ import { PaisDetalleComponent } from './components/pais-detalle/pais-detalle.com
     NosotrosComponent,
     ColaboradoresComponent,
     PaisesComponent,
-    PaisDetalleComponent
+    PaisDetalleComponent,
+    TiendaComponent,
+    ProductosComponent
   ],
   imports: [
     BrowserModule,
