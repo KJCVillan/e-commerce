@@ -3,7 +3,7 @@
     <h2>Categorias</h2>
 
     <p>
-      <a class="btn btn-primary" data-bs-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
+      <a class="btn btn-primary" data-bs-toggle="collapse" href="#collapseAgregar" role="button" aria-expanded="false" aria-controls="collapseExample">
         Nueva categoria
       </a>
       <!-- <button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
@@ -11,7 +11,7 @@
       </button> -->
     </p>
 
-    <div class="collapse" id="collapseExample">
+    <div class="collapse" id="collapseAgregar">
       <div class="card card-body">
         <form ngNativeValidate [formGroup] ="categoriasAgregarForms"
         (ngSubmit)="agregarCategoria(categoriasAgregarForms.value)">
@@ -25,10 +25,12 @@
             formControlName = "descripcion"
             required minlength="4">
           </div>
-          <button type="submit" class="btn btn-primary">Agregar</button>
+          <button type="submit" class="btn btn-primary" >Agregar</button>
         </form>
       </div>
     </div>
+    <br>
+    <hr>
 
     <table class="table table-striped table-hover">
       <thead>
@@ -36,6 +38,8 @@
           <th>cod</th>
           <th>nombre</th>
           <th>descripcion</th>
+          <th></th>
+          <th></th>
         </tr>
       </thead>
       <tbody>
@@ -43,8 +47,59 @@
           <td>{{filaCategoria.idcategoria}}</td>
           <td>{{filaCategoria.nombre}}</td>
           <td>{{filaCategoria.descripcion}}</td>
+          <td><fa-icon [icon]="faEdit" (click) = "editarCategoria(filaCategoria)"
+            data-bs-toggle="modal" data-bs-target="#formulario-actualizar"></fa-icon></td>
+          <td><fa-icon [icon]="faTimes"(click) = "eliminarCategoria(filaCategoria)"></fa-icon></td>
         </tr>
       </tbody>
     </table>
   </div>
 </section>
+
+<!-- Modal -->
+<div class="modal fade" id="formulario-actualizar" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Actualizar Categoria</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+
+      <form ngNativeValidate [formGroup] ="categoriasActualizarForms"
+      (ngSubmit)="actualizarCategoria(categoriasActualizarForms.value)"
+      *ngIf="categoriaActualizar">      
+      <div class="modal-body">
+
+        <!-- Fomulario Modal -->
+            <div class="mb-3">
+              <input type="text" class="form-control" placeholder=""
+              formControlName = "idcategoria"
+              [(ngModel)] = "categoriaActualizar.idcategoria"
+              readonly>
+            </div>
+            <div class="mb-3">
+              <label for="">Nombre</label>
+              <input type="text" class="form-control" placeholder=""
+              formControlName = "nombre"
+              [(ngModel)] = "categoriaActualizar.nombre"
+              required minlength="2">
+            </div>
+            <div class="mb-3">
+              <label for="">Descripcion</label>
+              <input type="text" class="form-control" placeholder=""
+              formControlName = "descripcion"
+              [(ngModel)] = "categoriaActualizar.descripcion"
+              required minlength="4">
+            </div>
+        </div>
+
+        <div class="modal-footer">
+          <button type="submit" class="btn btn-secondary" data-bs-dismiss="modal" id="btnCerrar">Close</button>
+          <button type="submit" class="btn btn-primary">Save changes</button>
+        </div>
+        
+      </form>
+        
+      </div>
+    </div>
+  </div>

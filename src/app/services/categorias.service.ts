@@ -30,4 +30,25 @@ export class CategoriasService {
       })
     )
   }
+
+  categoriasUpdate (idcategoria, nombre, descripcion)
+  {
+    const ruta = "https://servicios.campus.pe/categoriasactualizar.php";
+
+    const formData: FormData = new FormData();
+    formData.append("idcategoria",idcategoria)
+    formData.append("nombre",nombre)
+    formData.append("descripcion",descripcion)
+
+    return this.http.post(ruta,formData)
+  }
+
+  categoriasDelete (idcategoria)
+  {
+    const ruta = "https://servicios.campus.pe/categoriaseliminar.php";
+
+    const formData: FormData = new FormData();
+    formData.append("idcategoria",idcategoria)
+    return this.http.post(ruta,formData)
+  }
 }

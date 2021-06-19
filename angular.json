@@ -127,5 +127,8 @@
       }
     }
   },
-  "defaultProject": "tienda-isil"
+  "defaultProject": "tienda-isil",
+  "cli": {
+    "analytics": "bcfbcdb8-93a1-4dbe-b0eb-a13807f29878"
+  }
 }

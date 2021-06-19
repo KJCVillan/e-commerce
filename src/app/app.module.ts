@@ -24,6 +24,9 @@ import { PaisDetalleComponent } from './components/pais-detalle/pais-detalle.com
 import { TiendaComponent } from './components/tienda/tienda.component';
 import { ProductosComponent } from './components/productos/productos.component';
 import { TablaCategoriaComponent } from './tablas/tabla-categoria/tabla-categoria.component';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { LoginComponent } from './components/login/login.component';
+import { EscritorioComponent } from './components/escritorio/escritorio.component';
 
 @NgModule({
   declarations: [
@@ -43,7 +46,9 @@ import { TablaCategoriaComponent } from './tablas/tabla-categoria/tabla-categori
     PaisDetalleComponent,
     TiendaComponent,
     ProductosComponent,
-    TablaCategoriaComponent
+    TablaCategoriaComponent,
+    LoginComponent,
+    EscritorioComponent
   ],
   imports: [
     BrowserModule,
@@ -53,7 +58,8 @@ import { TablaCategoriaComponent } from './tablas/tabla-categoria/tabla-categori
     OrderModule,
     FormsModule,
     ReactiveFormsModule,
-    NgxPaginationModule
+    NgxPaginationModule,
+    FontAwesomeModule
   ],
   providers: [],
   bootstrap: [AppComponent]
